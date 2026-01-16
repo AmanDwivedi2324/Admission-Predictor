@@ -1,5 +1,11 @@
 import streamlit as st
 import pickle
+from PIL import Image
+
+# loading favicon 
+img = Image.open("favicon.png")
+
+st.set_page_config(page_title="Admission Predictor", page_icon=img)
 
 # loading the trained data 
 model = pickle.load(open('model.pkl','rb'))
